@@ -16,6 +16,7 @@ public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "cd_cliente")
     private Long idCliente;
 
     @Column(name = "ds_nome")
@@ -31,6 +32,7 @@ public class Cliente {
     private String senha;
 
     @Column(name = "dt_nascimento")
+    @Temporal(TemporalType.DATE)
     private Date dataNasc;
 
     @Column(name = "ds_genero")
